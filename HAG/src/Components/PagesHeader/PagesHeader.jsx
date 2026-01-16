@@ -11,7 +11,7 @@ export default function PagesHeader() {
             <nav className="NavButtons">
                 <li> <Link to="/" className="NavBtn"> Home </Link> </li>
                 <li> <Link to="/accounts" className="NavBtn"> Sign up </Link></li>
-                <li> <Link to="/" className="NavBtn"> Health Advice </Link></li>
+                <li> <Link to="/HAP" className="NavBtn"> Health Advice </Link></li>
             </nav>
         </div>
 

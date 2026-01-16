@@ -1,15 +1,15 @@
-import "./AccountsPage.css"
+import "./TermsAndConditionsPage.css"
 import PagesHeader from "../../Components/PagesHeader/PagesHeader"
 import PagesHeaderForMobile from "../../Components/PagesHeaderForMobile/PagesHeaderForMobile"
 
-export default function AccountsPage(){
-    return(
+export default function TermsAndConditionsPage() {
+    return (
         <>
-        <PagesHeader/> 
-        <PagesHeaderForMobile/>
+            <PagesHeader />
+            <PagesHeaderForMobile />
 
-        boo
-        
+            hello
+
         </>
     )
 }

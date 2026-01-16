@@ -9,26 +9,26 @@ export default function PagesHeaderForMobile() {
     const [openMenu, setOpenMenu] = useState(false)
 
     function toggleOpen() {
-        setOpenMenu(!open)
+        setOpenMenu(!openMenu)
     }
 
     let menuClassName = "menu-icon";
     if (openMenu) {
         menuClassName = "menu-icon open"
     }
-    const navMenu = <nav className="NavButtons">
-                <li> <Link to="/" className="NavBtn"> Homfffe </Link> </li>
+    const navMenu = <nav className="NavButtonsforMobile">
+                <li> <Link to="/" className="NavBtn"> Home </Link> </li>
                 <li> <Link to="/accounts" className="NavBtn"> Sign up </Link></li>
-                <li> <Link to="/" className="NavBtn"> Health Advice </Link></li>
+                <li> <Link to="/HAP" className="NavBtn"> Health Advice </Link></li>
             </nav>
     
     return (
-        <div className="MobileHeaderBox">
+        <header className="MobileHeaderBox">
             <img src={Logo} className="headerLogo" />
 
             <img onClick={toggleOpen} src={MenuIcon} className={menuClassName}  />
-            {open ? navMenu : null}
-        </div>
+            {openMenu ? navMenu : null}
+        </header>
 
     )
 }
