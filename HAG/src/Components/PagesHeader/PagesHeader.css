@@ -1,0 +1,55 @@
+.headerBox {
+
+    height: 125px;
+    min-width: 100%;
+    background-color: #313536;
+
+    display: flex;
+    align-items: center;
+
+}
+
+.headerLogo {
+    height: 80%;
+    margin-right: auto;
+    margin: 15px;
+
+    border: 1px solid black;
+}
+
+.NavButtons {
+    text-decoration: none;
+    margin-left: auto;
+    
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+
+    >li {
+        list-style-type: none;
+
+    
+    }
+    .NavBtn{
+        border: 2px solid #FFDF22;
+        background-color: #FFDF22;
+        border-radius: 10px;
+        border-width: 10px;
+
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: x-large;
+        padding: -10px;
+
+
+    }
+}
+
+@media only screen and (max-width: 605px){
+    .headerBox{
+        display: none;
+    }
+}
