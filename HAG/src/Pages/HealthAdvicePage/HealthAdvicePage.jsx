@@ -10,7 +10,7 @@ export default function HealthAdvicePage(){
         <PagesHeader/> 
         <PagesHeaderForMobile/>
 
-        heydd
+        Health Advice Page
         
         <Footer/>
 

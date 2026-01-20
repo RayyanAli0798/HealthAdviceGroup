@@ -1,4 +1,4 @@
-.FooterBox{
+.FooterBox {
     height: fit-content;
     width: 100vw;
 
@@ -6,31 +6,41 @@
     background-color: #313536;
     margin-top: auto;
 
-    >h2{
+    >h2 {
         color: white;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-family: Georgia, 'Times New Roman', Times, serif;
         justify-self: center;
     }
 
-    .textLine{
+    .textLine {
         display: flex;
     }
-    .textLine3{
+
+    .textLine3 {
         justify-self: center;
     }
-    .Linkarea1{
+
+    .Linkarea1 {
         display: flex;
         flex-direction: column;
         justify-self: center;
         align-items: center;
-        
-    }   
-    >link{
+
+    }
+
+    >link {
         color: rgb(255, 255, 255);
     }
-    .LinkText{
+
+    .LinkText {
         color: rgb(255, 255, 255);
         text-decoration: none;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
+
+@media only screen and (max-width: 335px) {
+    .FooterBox {
+        font-size: x-small;
     }
 }

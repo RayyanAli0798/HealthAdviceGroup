@@ -9,7 +9,7 @@ export default function HomePage(){
         <PagesHeader/> 
         <PagesHeaderForMobile/>
         
-
+        Home Page 
         <Footer/>
         </>
     )

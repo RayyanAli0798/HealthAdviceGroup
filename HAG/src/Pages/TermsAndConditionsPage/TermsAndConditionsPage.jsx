@@ -8,7 +8,7 @@ export default function TermsAndConditionsPage() {
             <PagesHeader />
             <PagesHeaderForMobile />
 
-            hello
+            Terms and conditions page. 
 
         </>
     )
