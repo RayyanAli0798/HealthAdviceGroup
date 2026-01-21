@@ -5,7 +5,9 @@ function App() {
 
   return (
     <>
-      <Pages/>
+      <main className='Main-Content'>
+        <Pages />
+      </main>
     </>
   )
 }

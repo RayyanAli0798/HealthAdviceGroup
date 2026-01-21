@@ -11,6 +11,8 @@
     position: fixed;
     align-items: center;
 
+    z-index: 1000;
+
 }
 
 .headerLogo {
@@ -54,13 +56,13 @@
         padding: 10px;
         margin: 25px;
 
-        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-family: "Inria Sans";
         font-size: x-large;
 
     }
 }
 
-@media only screen and (min-width: 605px) {
+@media only screen and (min-width: 621px) {
     .MobileHeaderBox {
         display: none;
     }

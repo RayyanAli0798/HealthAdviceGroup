@@ -50,22 +50,25 @@ function SignUp({ toggle }) {
 
     // Signup forms
     return (
-        <div className="AccountsPageBackgroundBox">
-            <h3 className="AccountPageTitle"> Join Health Advice Group </h3>
-            <form onSubmit={SigningUp}>
-                <label> Email: <input type="email" className="AuthenticationInputBox" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />  </label>
 
-                <label> Password: <input type="password" className="AuthenticationInputBox" placeholder="Password" onChange={(e) => setPassword(e.target.value)} /></label>
+        <div className="AccountsBoxContainer">
+            <div className="AccountsPageBackgroundBox">
+                <h3 className="AccountPageTitle"> Join Health Advice Group </h3>
+                <form onSubmit={SigningUp}>
+                    <label> Email: <input type="email" className="AuthenticationInputBox" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />  </label>
+
+                    <label> Password: <input type="password" className="AuthenticationInputBox" placeholder="Password" onChange={(e) => setPassword(e.target.value)} /></label>
 
 
-                <label> Re-enter Password: <input type="password" className="AuthenticationInputBox" placeholder="Confirm Password" onChange={(e) => setConfirmPassword(e.target.value)} /> </label>
+                    <label> Re-enter Password: <input type="password" className="AuthenticationInputBox" placeholder="Confirm Password" onChange={(e) => setConfirmPassword(e.target.value)} /> </label>
 
-                <label><input type="checkbox" required /> <p className="CheckboxText"> Do you agree to the <Link to="/TNC"> terms and conditions?</Link> </p></label>
-                <button className="SubmissionBtn" type="submit"> Register </button>
-            </form>
-            {errorMSG ? <p> Error: {errorMSG} </p> : null}
-            <span className="Switching"> <p> Already have an account? <button className="SwitchingBTN" onClick={toggle}> Sign In! </button></p> </span>
-        </div>
+                    <label><input type="checkbox" required /> <p className="CheckboxText"> Do you agree to the <Link to="/TNC"> terms and conditions?</Link> </p></label>
+                    <button className="SubmissionBtn" type="submit"> Register </button>
+                </form>
+                {errorMSG ? <p> Error: {errorMSG} </p> : null}
+                <span className="Switching"> <p> Already have an account? <button className="SwitchingBTN" onClick={toggle}> Sign In! </button></p> </span>
+
+            </div> </div>
     )
 }
 
@@ -89,17 +92,19 @@ function SignIn({ toggle }) {
     }
     // Signin function
     return (
+        <div className="AccountsBoxContainer">
         <div className="AccountsPageBackgroundBox">
             <h3 className="AccountPageTitle"> Welcome Back! </h3>
             <form onSubmit={SigningUp}>
-                <label>Email: <input type="email" className="AuthenticationInputBox" placeholder="Email" required/></label>
+                <label>Email: <input type="email" className="AuthenticationInputBox" placeholder="Email" required /></label>
 
-                <label> Password:<input type="password" className="AuthenticationInputBox" placeholder="Password" required/></label>
+                <label> Password:<input type="password" className="AuthenticationInputBox" placeholder="Password" required /></label>
 
                 <button type="submit" className="SubmissionBtn"> Log in </button>
             </form>
             {errorMSG ? <p> Error: {errorMSG} </p> : null}
             <span className="Switching">  <p>Dont have an account? <button className="SwitchingBTN" onClick={toggle}> Sign Up! </button></p> </span>
+        </div>
         </div>
     )
 }

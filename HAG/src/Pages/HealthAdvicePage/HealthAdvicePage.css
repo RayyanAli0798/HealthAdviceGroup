@@ -1,0 +1,51 @@
+.ArticlesBoxOnHAP {}
+
+.HealthPageTitle {
+    width: 500px;
+    height: fit-content;
+
+    margin: 0 auto;
+    text-align: center;
+    font-size: xx-large;
+    -webkit-text-stroke: 2px black;
+    paint-order: stroke fill;
+    color: white;
+}
+
+
+.ContentsBox {
+    width: 300px;
+    height: 300px;
+    background-color: #313536;
+    position: fixed;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+
+    z-index: 1;
+    top: 35dvh;
+    
+
+}
+
+.ContentBoxArea {
+    width: 50%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+
+    
+
+}
+
+.HealthAdvicePageContent {
+    display: flex;
+    padding-top: 125px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.ArticlesSection {
+    height: fit-content;
+    width: fit-content;
+}

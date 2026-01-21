@@ -2,9 +2,9 @@
     height: fit-content;
     width: 100vw;
 
-    border: 2px solid #313536;
     background-color: #313536;
     margin-top: auto;
+    z-index: 1000;
 
     >h2 {
         color: white;
