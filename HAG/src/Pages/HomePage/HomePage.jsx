@@ -1,16 +1,22 @@
 import "./HomePage.css"
 import PagesHeader from "../../Components/PagesHeader/PagesHeader"
 import PagesHeaderForMobile from "../../Components/PagesHeaderForMobile/PagesHeaderForMobile"
+import skyBackgroundHomePage from "../../assets/skyBackgroundHomePage.jpg"
 import Footer from "../../Components/Footer/Footer"
 
-export default function HomePage(){
-    return(
+export default function HomePage() {
+    return (
         <>
-        <PagesHeader/> 
-        <PagesHeaderForMobile/>
-        
-        Home Page 
-        <Footer/>
+            <PagesHeader />
+            <PagesHeaderForMobile />
+            <img src={skyBackgroundHomePage} className="BackgroundImageHomePage" />
+            <div className="HomeContent">
+
+                <h1 className="HealthPageTitle">    Health Advice Group’s <br /> Health Advice Page</h1>
+               
+
+            </div>
+            <Footer />
         </>
     )
 }

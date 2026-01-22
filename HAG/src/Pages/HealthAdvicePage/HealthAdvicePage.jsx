@@ -11,6 +11,8 @@ export default function HealthAdvicePage() {
 
             <PagesHeader />
             <PagesHeaderForMobile />
+            <h1 className="HealthPageTitle">    Health Advice Group’s <br /> Health Advice Page</h1>
+
             <div className="HealthAdvicePageContent">
                 <div className="ContentBoxArea">
                     <div className="ContentsBox">
@@ -18,8 +20,6 @@ export default function HealthAdvicePage() {
 
                     </div>
                 </div>
-
-                <h1 className="HealthPageTitle">    Health Advice Group’s <br /> Health Advice Page</h1>
 
                 <div className="ArticlesSection">
                     <ArticleBox name={"Hayfever"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, exercitationem a. Odio iste, expedita itaque natus quo."} Symptons={["booddm", "another one", "another one"]} Treatments={["Medicine", "rest"]} Link={"/"} className="ArticlesBoxOnHAP" />

@@ -1,7 +1,9 @@
-.ArticlesBoxOnHAP {}
+
 
 .HealthPageTitle {
-    width: 500px;
+    width: 100%;
+    
+    padding-top: 125px;
     height: fit-content;
 
     margin: 0 auto;
@@ -21,7 +23,6 @@
     text-align: center;
     color: white;
     border-radius: 10px;
-
     z-index: 1;
     top: 35dvh;
     
@@ -40,12 +41,16 @@
 
 .HealthAdvicePageContent {
     display: flex;
-    padding-top: 125px;
-    justify-content: space-between;
     position: relative;
+
 }
 
 .ArticlesSection {
     height: fit-content;
-    width: fit-content;
+    width: 50%;
+    
+    justify-items: center;
+    align-items: center;
+    margin-top: -25px;
+
 }

@@ -93,18 +93,18 @@ function SignIn({ toggle }) {
     // Signin function
     return (
         <div className="AccountsBoxContainer">
-        <div className="AccountsPageBackgroundBox">
-            <h3 className="AccountPageTitle"> Welcome Back! </h3>
-            <form onSubmit={SigningUp}>
-                <label>Email: <input type="email" className="AuthenticationInputBox" placeholder="Email" required /></label>
+            <div className="AccountsPageBackgroundBox">
+                <h3 className="AccountPageTitle"> Welcome Back! </h3>
+                <form onSubmit={SigningUp}>
+                    <label>Email: <input type="email" className="AuthenticationInputBox" placeholder="Email" required /></label>
 
-                <label> Password:<input type="password" className="AuthenticationInputBox" placeholder="Password" required /></label>
+                    <label> Password:<input type="password" className="AuthenticationInputBox" placeholder="Password" required /></label>
 
-                <button type="submit" className="SubmissionBtn"> Log in </button>
-            </form>
-            {errorMSG ? <p> Error: {errorMSG} </p> : null}
-            <span className="Switching">  <p>Dont have an account? <button className="SwitchingBTN" onClick={toggle}> Sign Up! </button></p> </span>
-        </div>
+                    <button type="submit" className="SubmissionBtn"> Log in </button>
+                </form>
+                {errorMSG ? <p> Error: {errorMSG} </p> : null}
+                <span className="Switching">  <p>Dont have an account? <button className="SwitchingBTN" onClick={toggle}> Sign Up! </button></p> </span>
+            </div>
         </div>
     )
 }

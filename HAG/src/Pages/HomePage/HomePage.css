@@ -1,0 +1,26 @@
+.BackgroundImageHomePage {
+    mix-blend-mode: lighten;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.HomeContent {
+    z-index: 4;
+
+}
+
+.HealthPageTitle {
+    width: 100%;
+
+    padding-top: 125px;
+    height: fit-content;
+
+    margin: 0 auto;
+    text-align: center;
+    font-size: xx-large;
+    -webkit-text-stroke: 2px black;
+    paint-order: stroke fill;
+    color: white;
+}

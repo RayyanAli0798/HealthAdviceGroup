@@ -1,7 +1,7 @@
 .HealthAdviceBox{
     background-color: #313536;
     height: fit-content;
-    width: 425px;
+    width: 500px;
     margin: 25px;
     padding: 10px;
     border-radius: 10px;
@@ -23,6 +23,12 @@
         font-size: larger;
         margin: 0 auto;
         background-color:  #FFDF22;
+    }
+    >p{
+        font-size: larger;
+    }
+    >h3{
+        font-size: x-large
     }
 }
 
