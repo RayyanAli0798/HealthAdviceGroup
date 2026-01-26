@@ -14,7 +14,7 @@ export default function HomePage() {
             <div className="HomeContent">
 
                 <h1 className="HealthPageTitle">    Health Advice Group’s <br /> Health Advice Page</h1>
-                <SelectorMenu ItemsList={["London", "GoobTown"]} />
+                <SelectorMenu ItemsList={["London"]} className="LocationSelector" />
 
             </div>
             <Footer />
