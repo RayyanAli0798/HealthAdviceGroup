@@ -4,6 +4,7 @@ import PagesHeaderForMobile from "../../Components/PagesHeaderForMobile/PagesHea
 import skyBackgroundHomePage from "../../assets/skyBackgroundHomePage.jpg"
 import Footer from "../../Components/Footer/Footer"
 import SelectorMenu from "../../Components/SelectorMenu/SelectorMenu"
+import Forecast from "../../Components/Forecast/Forecast"
 
 export default function HomePage() {
     return (
@@ -13,9 +14,11 @@ export default function HomePage() {
             <img src={skyBackgroundHomePage} className="BackgroundImageHomePage" />
             <div className="HomeContent">
 
-                <h1 className="HealthPageTitle">    Health Advice Group’s <br /> Health Advice Page</h1>
+                <h1 className="HealthPageTitle">    Health Advice Group’s <br /> Home Page</h1>
                 <SelectorMenu ItemsList={["London"]} className="LocationSelector" />
 
+
+                <Forecast/>
             </div>
             <Footer />
         </>

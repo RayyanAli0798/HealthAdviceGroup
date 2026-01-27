@@ -1,0 +1,12 @@
+.ForecastContainer{
+    width: 100%;
+    max-width: 500px;
+    
+    height: 50px;
+    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    
+    background-color: #313536;
+
+}
