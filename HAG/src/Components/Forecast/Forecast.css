@@ -1,12 +1,67 @@
-.ForecastContainer{
-    width: 100%;
-    max-width: 500px;
-    
-    height: 50px;
-    overflow: scroll;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    
+.ForecastContainer {
+    margin: 25px;
+    border-radius: 15px;
+
+    width: 75dvw;
+    height: 25dvh;
+
+    min-height: fit-content;
+    gap: 25px;
+    padding: 10px;
     background-color: #313536;
 
+}
+
+
+.WeatherBoxDaily {
+    background-color: #81BBC9;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
+
+    height: fit-content;
+    width: fit-content;
+    min-width: 100px;
+
+
+    >h3 {
+        -webkit-text-stroke: 2px black;
+        paint-order: stroke fill;
+        color: white;
+    }
+
+    >p {}
+}
+
+.WeatherIcon {
+    height: 70px;
+    width: 70px;
+}
+
+.WeeklyForecast {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    max-height: 50%;
+    min-height: fit-content;
+
+    justify-content: space-evenly;
+    padding: 10px 0px;
+
+
+}
+
+.HourlyForecast {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    max-height: 50%;
+    min-height: fit-content;
+
+
+    justify-content: space-evenly;
+    padding: 10px 0px;
 }
