@@ -1,0 +1,69 @@
+.DashboardBoxs {
+    height: 75dvh;
+    width: 50dvw;
+
+    max-height: fit-content;
+    max-width: 1000px;
+    background-color: #313536;
+
+    padding: 32px;
+    border-radius: 15px;
+
+
+}
+
+.DashboardInformations {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.DashboardTitle {
+    color: white;
+    text-align: center;
+    font-family: "Inria Sans";
+    border: 2px solid yellow;
+
+    width: 100%;
+    height: fit-content;
+}
+
+.DashboardBox {
+
+    height: fit-content;
+    width: 300px;
+
+
+    border: 2px solid black;
+    background-color: #81BBC9;
+}
+
+.DashboardBoxTitle {
+    width: 100%;
+    background-color: #252222;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+
+}
+
+.DashboardBoxContent {
+    font-size: 45px;
+    font-family: "Inria Sans";
+    font-weight: 550;
+    text-align: center;
+}
+
+.leftsideofDashboard {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+}
+
+.RightSideOfDashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; 
+    border: 2px solid green;
+}
