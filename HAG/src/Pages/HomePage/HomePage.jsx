@@ -13,19 +13,22 @@ export default function HomePage() {
             <PagesHeader />
             <PagesHeaderForMobile />
 
+            <main className='Main-Content'>
+                <img src={skyBackgroundHomePage} className="BackgroundImageHomePage" />
 
-            <img src={skyBackgroundHomePage} className="BackgroundImageHomePage" />
-            
-            <div className="HomeContent">
+                <div className="HomeContent">
 
-                <h1 className="HealthPageTitle">    Health Advice Group’s <br /> Home Page</h1>
-                <SelectorMenu ItemsList={["London"]} className="LocationSelector" />
+                    <h1 className="HealthPageTitle">    Health Advice Group’s <br /> Home Page</h1>
+                    <SelectorMenu ItemsList={["London"]} className="LocationSelector" />
 
-                <Forecast/>
-                <Dashboard />
-            </div>
+                    <Forecast />
+                    <Dashboard />
+                </div>
 
-            <Footer/>
+            </main>
+
+
+            <Footer />
         </>
     )
 }

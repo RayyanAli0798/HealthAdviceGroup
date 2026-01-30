@@ -1,69 +1,213 @@
-.DashboardBoxs {
-    height: 75dvh;
-    width: 50dvw;
-
-    max-height: fit-content;
-    max-width: 1000px;
-    background-color: #313536;
-
-    padding: 32px;
+.DashboardContainer {
+    margin: 25px;
     border-radius: 15px;
 
+    width: 60dvw;
+    height: 20dvh;
 
-}
+    max-width: 900px;
+    max-height: fit-content;
+    min-height: fit-content;
+    min-width: fit-content;
 
-.DashboardInformations {
+    gap: 20px;
+    padding: 10px;
+    background-color: #313536;
+
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+
+
+    background-color: #313536;
 }
 
 .DashboardTitle {
     color: white;
     text-align: center;
     font-family: "Inria Sans";
-    border: 2px solid yellow;
-
-    width: 100%;
-    height: fit-content;
 }
 
 .DashboardBox {
-
-    height: fit-content;
-    width: 300px;
-
-
-    border: 2px solid black;
     background-color: #81BBC9;
-}
-
-.DashboardBoxTitle {
+    max-width: 75%;
+    min-height: fit-content;
     width: 100%;
+    min-width: 175px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: fit-content;
+
+
+    margin: 0 10;
+
+}
+
+.MainDashboardContent {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    margin-top: -15px;
+
+}
+
+.LeftDashboard {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.rightDashboard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.ConditionsTitles {
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+
+
+    font-family: "inter";
+    font-size: x-large;
     background-color: #252222;
+    -webkit-text-stroke: 2px black;
+    paint-order: stroke fill;
     color: white;
-    font-size: 35px;
+
+
+
+}
+
+.BoxContents {
+    font-size: 40px;
+    font-weight: 500;
+
+
+}
+
+.AirQualityCircle {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
+
+    height: 10dvh;
+    width: 8dvw;
+    min-width: 7dvh;
+
     text-align: center;
+    align-self: center;
+
+    padding-top: 17px;
+    font-weight: 700;
+
+    font-size: xx-large;
+
 
 }
 
-.DashboardBoxContent {
-    font-size: 45px;
-    font-family: "Inria Sans";
-    font-weight: 550;
-    text-align: center;
+.AirQualityInfo {
+    margin: 0 auto;
+
+    justify-self: center;
+    align-self: center;
+
+    min-width: fit-content;
+    min-height: fit-content;
 }
 
-.leftsideofDashboard {
+.AirQualityContent {
+
+
+    width: 100%;
+    height: 80%;
     display: flex;
-    flex-direction: column;
-    border: 2px solid red;
+
+    align-items: baseline;
+    justify-content: center;
+
 }
 
-.RightSideOfDashboard {
-    display: flex;
-    flex-direction: column;
-    gap: 25px; 
-    border: 2px solid green;
+.AirQualityTitleInBox {
+    -webkit-text-stroke: 2px black;
+    paint-order: stroke fill;
+    font-size: x-large;
+
+}
+
+@media only screen and (max-width: 620px) {
+    .MainDashboardContent {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .rightDashboard {
+        margin-top: 25px;
+    }
+
+    .AirQualityInfo >p{
+        display: none;
+    }
+    .AirQualityContent{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+
+
+
+
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.Red {
+    color: red;
+}
+
+.Yellow {
+    color: yellow;
+}
+
+.Green {
+    background-color: green;
+}
+
+.Purple {
+    color: purple;
+}
+
+.Orange {
+    color: orange;
+
 }
