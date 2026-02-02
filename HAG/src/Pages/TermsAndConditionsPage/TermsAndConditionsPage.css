@@ -1,0 +1,53 @@
+.TermsAndConditionTitle {
+
+    font-size: xx-large;
+    font-family: "Inria Sans";
+    text-decoration: underline;
+}
+
+.LastUpdated {
+    font-size: x-large;
+    font-family: "Inria Sans";
+    font-weight: 550;
+    margin-top: -10px;
+}
+
+.TermsAndConditionsContents {
+    font-size: medium;
+    font-family: "Inria Sans";
+    margin-top: -5px;
+}
+
+.LegalBox {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 50%;
+    width: 100%;
+    min-height: fit-content;
+
+    margin-top: 125px;
+    margin-left: 10px;
+
+}
+
+.TNCimage{
+    max-height: 50%;
+    max-width: 40dvw;
+
+    position: fixed;
+    
+    right: 10%;
+    top: 25%;
+    
+
+}
+
+@media only screen and (max-width:600px){
+    .TNCimage{
+        display: none;
+    }
+    .LegalBox{
+        max-width: 90%;
+    }
+}

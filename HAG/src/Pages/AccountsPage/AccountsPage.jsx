@@ -3,6 +3,7 @@ import PagesHeader from "../../Components/PagesHeader/PagesHeader"
 import PagesHeaderForMobile from "../../Components/PagesHeaderForMobile/PagesHeaderForMobile"
 import { Link } from "react-router"
 import { useState } from "react"
+import axios from "axios"
 
 
 export default function AccountsPage() {
@@ -43,8 +44,24 @@ function SignUp({ toggle }) {
 
         let signUpData = {
             email,
-            password
+            password,
+            "confirm_password": confirmPassword
+
         }
+
+        const url = "http://127.0.0.1:8001/authentication/register"
+        function handlingError(err) {
+            setErrorMSG(
+                err.response?.data?.detail || "Something went wrong"
+            );
+        }
+        function handlingSuccess(res) {
+            alert("Successful send")
+        }
+
+        axios.post(url, signUpData)
+            .then(handlingSuccess)
+            .catch(handlingError)
     }
 
 
@@ -72,8 +89,6 @@ function SignUp({ toggle }) {
     )
 }
 
-
-
 function SignIn({ toggle }) {
 
     const [email, setEmail] = useState("")
@@ -89,6 +104,22 @@ function SignIn({ toggle }) {
             email,
             password
         }
+
+        function handleSuccess(res) {
+            alert("Success")
+        }
+        function handleError(err) {
+            setErrorMSG(
+                err.response?.data?.detail || "Something went wrong"
+            );
+        }
+
+        const url = "http://127.0.0.1:8001/authentication/login"
+
+        axios.post(url, signInData)
+            .then(handleSuccess)
+            .catch(handleError)
+
     }
     // Signin function
     return (
@@ -96,9 +127,9 @@ function SignIn({ toggle }) {
             <div className="AccountsPageBackgroundBox">
                 <h3 className="AccountPageTitle"> Welcome Back! </h3>
                 <form onSubmit={SigningUp}>
-                    <label>Email: <input type="email" className="AuthenticationInputBox" placeholder="Email" required /></label>
+                    <label>Email: <input type="email" className="AuthenticationInputBox" placeholder="Email" required onChange={(e) => setEmail(e.target.value)} /></label>
 
-                    <label> Password:<input type="password" className="AuthenticationInputBox" placeholder="Password" required /></label>
+                    <label> Password:<input type="password" className="AuthenticationInputBox" placeholder="Password" required onChange={(e) => setPassword(e.target.value)} /></label>
 
                     <button type="submit" className="SubmissionBtn"> Log in </button>
                 </form>

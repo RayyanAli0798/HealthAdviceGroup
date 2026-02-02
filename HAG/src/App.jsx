@@ -5,9 +5,7 @@ function App() {
 
   return (
     <>
-      {/* <main className='Main-Content'> */}
         <Pages />
-      {/* </main> */}
     </>
   )
 }

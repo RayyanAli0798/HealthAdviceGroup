@@ -13,11 +13,13 @@ export default function SelectorMenu({ ItemsList }) {
 
             <div className="content">
                 {ItemsList.map((item, index) => (
-                    <a key={index} onClick={()=> (setLocation(item))}>  {item} </a>
+                    <p key={index} onClick={()=> (setLocation(item))}>  {item} </p>
                 ))}
 
             </div>
         </div>
     )
 
+
+    
 }

@@ -19,7 +19,7 @@
 
 }
 
-.dropdown a {
+.dropdown p {
     display: block;
     color: black;
     text-decoration: none;
@@ -49,6 +49,6 @@
 
 }
 
-.dropdown a:hover {
+.dropdown p:hover {
     background-color: #ffffff;
 }

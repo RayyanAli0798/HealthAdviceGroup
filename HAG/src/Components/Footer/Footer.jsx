@@ -1,5 +1,6 @@
 import "./Footer.css"
-import { Link } from "react-router"
+import { Link } from "react-router-dom"
+import { HashLink } from 'react-router-hash-link';
 
 export default function Footer() {
     return (
@@ -7,14 +8,15 @@ export default function Footer() {
             <h2> Our Policies </h2> 
             <div className="Linkarea1">
                 <nav className=" textLine">
-                    <Link to="/TNC" className="LinkText">  Privacy  </Link>
-                    <Link to="/TNC" className="LinkText"> | Terms and Conditions | </Link>
-                    <Link to="/TNC" className="LinkText"> Accessibillity  </Link>
+                    <HashLink smooth to="/TNC#PrivacyPolicyBox" className="LinkText">  Privacy  </HashLink>
+                    <HashLink smooth to="/TNC#TermsAndConditionsBox" className="LinkText"> | Terms and Conditions | </HashLink>
+                    <HashLink smooth to="/TNC#AccessibillityStatementBox" className="LinkText"> Accessibillity  </HashLink>
                 </nav>
                 <nav className=" textLine2">
-                    <Link to="/TNC" className="LinkText"> Legal | </Link>
-                    <Link to="/TNC" className="LinkText"> Cookie </Link>
+                    <HashLink smooth to="/TNC#LegalPolicyBox" className="LinkText"> Legal |</HashLink>
+                    <HashLink smooth to="/TNC#CookiePolicyBox" className="LinkText"> Cookie </HashLink>
                 </nav>
+                
             </div>
             <h2> Useful Links </h2>
             <nav className=" textLine3">
