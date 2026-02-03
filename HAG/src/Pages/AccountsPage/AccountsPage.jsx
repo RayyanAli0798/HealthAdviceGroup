@@ -4,10 +4,12 @@ import PagesHeaderForMobile from "../../Components/PagesHeaderForMobile/PagesHea
 import { Link } from "react-router"
 import { useState } from "react"
 import axios from "axios"
-
+import { useUser } from "../../Contexts/UserContexts"
+import { useNavigate } from "react-router";
 
 export default function AccountsPage() {
     const [register, setRegister] = useState(true)
+    const SetLoggedIn = useUser();
 
     function toggleForm() {
         setRegister(!register)
@@ -16,6 +18,7 @@ export default function AccountsPage() {
         <>
             <PagesHeader />
             <PagesHeaderForMobile />
+
 
             {register ? <SignUp toggle={toggleForm} /> : <SignIn toggle={toggleForm} />}
 
@@ -31,22 +34,19 @@ function SignUp({ toggle }) {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [errorMSG, setErrorMSG] = useState("")
 
+    const { SetLoggedIn } = useUser();
+    const navigate = useNavigate();
+
 
     function SigningUp(event) {
         //stops page from refreshing after submission
         event.preventDefault()
         setErrorMSG("")
 
-        if (password != confirmPassword) {
-            setErrorMSG("Passwords dont match")
-            return
-        }
-
         let signUpData = {
             email,
             password,
             "confirm_password": confirmPassword
-
         }
 
         const url = "http://127.0.0.1:8001/authentication/register"
@@ -56,7 +56,8 @@ function SignUp({ toggle }) {
             );
         }
         function handlingSuccess(res) {
-            alert("Successful send")
+            SetLoggedIn(true)
+            navigate("/")
         }
 
         axios.post(url, signUpData)
@@ -82,7 +83,7 @@ function SignUp({ toggle }) {
                     <label><input type="checkbox" required /> <p className="CheckboxText"> Do you agree to the <Link to="/TNC"> terms and conditions?</Link> </p></label>
                     <button className="SubmissionBtn" type="submit"> Register </button>
                 </form>
-                {errorMSG ? <p> Error: {errorMSG} </p> : null}
+                {errorMSG ? <p className="ErrorMSG"> Error: {errorMSG} </p> : null}
                 <span className="Switching"> <p> Already have an account? <button className="SwitchingBTN" onClick={toggle}> Sign In! </button></p> </span>
 
             </div> </div>
@@ -94,6 +95,9 @@ function SignIn({ toggle }) {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [errorMSG, setErrorMSG] = useState("")
+    
+    const { SetLoggedIn } = useUser();
+    const navigate = useNavigate();
 
     function SigningUp(event) {
         //stops page from refreshing after submission
@@ -106,7 +110,8 @@ function SignIn({ toggle }) {
         }
 
         function handleSuccess(res) {
-            alert("Success")
+            SetLoggedIn(true)
+            navigate("/")
         }
         function handleError(err) {
             setErrorMSG(
@@ -133,7 +138,7 @@ function SignIn({ toggle }) {
 
                     <button type="submit" className="SubmissionBtn"> Log in </button>
                 </form>
-                {errorMSG ? <p> Error: {errorMSG} </p> : null}
+                {errorMSG ? <p className="ErrorMSG"> Error: {errorMSG} </p> : null}
                 <span className="Switching">  <p>Dont have an account? <button className="SwitchingBTN" onClick={toggle}> Sign Up! </button></p> </span>
             </div>
         </div>
