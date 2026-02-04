@@ -36,8 +36,7 @@ function AirQualityDisplay() {
     const [airQualityRatingInWords, SetAirQualityRatingInWords] = useState("")
     const [airQualityTitleClassname, setAirQualityTitleClassname] = useState("")
 
-    let AirQualityIndicator = "AirQualityCircle" + " " + airQualityClassName
-    let AirQualityTitle = airQualityTitleClassname + " " + "AirQualityTitleInBox"
+
 
     const [AirQualityRating, setAirQualityRating] = useState();
 
@@ -119,7 +118,8 @@ function AirQualityDisplay() {
             </div>
         )
     }
-
+    let AirQualityIndicator = "AirQualityCircle" + " " + airQualityClassName
+    let AirQualityTitle = airQualityTitleClassname + " " + "AirQualityTitleInBox"
     return (
         <div className="DashboardBox">
             <h3 className="ConditionsTitles"> Air Quality </h3>
@@ -216,5 +216,5 @@ function HumidityWindSpeedDisplay() {
         </>
     )
 
-    
+
 }

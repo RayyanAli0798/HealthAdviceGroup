@@ -4,7 +4,7 @@ import { useContext, createContext, useState } from "react";
 export const UserContext = createContext();
 
 export function UserProvider({children}){
-    const [LoggedIn, SetLoggedIn] = useState(true) 
+    const [LoggedIn, SetLoggedIn] = useState(false) 
 
     return(
         <UserContext.Provider value={{LoggedIn, SetLoggedIn}}>
