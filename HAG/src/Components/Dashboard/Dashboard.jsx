@@ -36,8 +36,6 @@ function AirQualityDisplay() {
     const [airQualityRatingInWords, SetAirQualityRatingInWords] = useState("")
     const [airQualityTitleClassname, setAirQualityTitleClassname] = useState("")
 
-
-
     const [AirQualityRating, setAirQualityRating] = useState();
 
 
@@ -75,7 +73,7 @@ function AirQualityDisplay() {
     const [airDataLoading, setAirDataLoading] = useState(true);
     const [airDataError, setAirDataError] = useState("");
 
-
+    
 
     function loadAir() {
         let query = `http://api.openweathermap.org/data/2.5/air_pollution?lat=51.52&lon=-0.127&appid=1dad6eab579ab34721c82203b48d18f5`
