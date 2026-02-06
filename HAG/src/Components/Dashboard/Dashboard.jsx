@@ -5,7 +5,7 @@ import axios from "axios";
 export default function Dashboard() {
 
     return (
-
+        // This is where Dashboard components are displayed
         <div className="DashboardContainer">
             <span className="DashboardTitle">
                 <h2> Today's Conditions </h2>
@@ -31,7 +31,7 @@ export default function Dashboard() {
 
 function AirQualityDisplay() {
 
-
+    // Use state to help store data from api
     const [airQualityClassName, setAirQualityClassName] = useState("")
     const [airQualityRatingInWords, SetAirQualityRatingInWords] = useState("")
     const [airQualityTitleClassname, setAirQualityTitleClassname] = useState("")
@@ -39,6 +39,7 @@ function AirQualityDisplay() {
     const [AirQualityRating, setAirQualityRating] = useState();
 
 
+    // Use effect handles all the conditions, conditions are needed so that the dashboard is more customized based on api response
     useEffect(() => {
 
         if (AirQualityRating == 1) {
@@ -68,13 +69,13 @@ function AirQualityDisplay() {
         }
     }, [AirQualityRating])
 
-
+    // Use states that control what is displayed on the screen
     const [airData, setAirData] = useState();
     const [airDataLoading, setAirDataLoading] = useState(true);
     const [airDataError, setAirDataError] = useState("");
 
-    
 
+    // Uses axios to call an API
     function loadAir() {
         let query = `http://api.openweathermap.org/data/2.5/air_pollution?lat=51.52&lon=-0.127&appid=1dad6eab579ab34721c82203b48d18f5`
 
@@ -92,12 +93,13 @@ function AirQualityDisplay() {
             })
     }
 
+    // calls the function here
     useEffect(() => {
         loadAir();
     }, [])
 
 
-
+    // Returned before api data is called
     if (airDataLoading) {
         return (
             <div className="DashboardBox">
@@ -107,6 +109,7 @@ function AirQualityDisplay() {
             </div>
         )
     }
+    // Returned After error
     if (airDataError) {
         return (
             <div className="DashboardBox">
@@ -116,8 +119,12 @@ function AirQualityDisplay() {
             </div>
         )
     }
+
+    // creates classnames
     let AirQualityIndicator = "AirQualityCircle" + " " + airQualityClassName
     let AirQualityTitle = airQualityTitleClassname + " " + "AirQualityTitleInBox"
+
+
     return (
         <div className="DashboardBox">
             <h3 className="ConditionsTitles"> Air Quality </h3>
@@ -141,11 +148,13 @@ function AirQualityDisplay() {
 
 function HumidityWindSpeedDisplay() {
 
+    // api data will store here
     const [humidity, setHumidity] = useState();
     const [WindSpeed, setWindSpeed] = useState();
     const [HumidityWindSpeedDataLoading, setHumidityWindSpeedDataLoading] = useState(true);
     const [HumidityWindSpeedDataError, setHumidityWindSpeedDataError] = useState("");
 
+    //uses axios to call the api
     function loadHumidityWindSpeed() {
         let query = `https://api.openweathermap.org/data/2.5/weather?lat=51.52&lon=-0.127&appid=1dad6eab579ab34721c82203b48d18f5`
 
@@ -163,10 +172,12 @@ function HumidityWindSpeedDisplay() {
             })
     }
 
+    //calls the api calling function
     useEffect(() => {
         loadHumidityWindSpeed();
     }, [])
 
+    // handles what the users see pre api data load
     if (HumidityWindSpeedDataLoading) {
         return (
             <>
@@ -183,6 +194,7 @@ function HumidityWindSpeedDisplay() {
             </>
         )
     }
+    //handles what users see when data cannot be loaded
     if (HumidityWindSpeedDataError) {
         return (
             <>
@@ -200,6 +212,7 @@ function HumidityWindSpeedDisplay() {
         )
     }
 
+    //returns after data is loaded
     return (
         <>
             <div className="DashboardBox">

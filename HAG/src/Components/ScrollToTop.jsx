@@ -9,7 +9,7 @@ export default function ScrollToTop() {
     if (hash) return;
 
     window.scrollTo({ top: 0, behavior: "instant" });
-  }, [pathname, hash]); // ✅ include hash
+  }, [pathname, hash]); // include hash
 
   return null;
 }

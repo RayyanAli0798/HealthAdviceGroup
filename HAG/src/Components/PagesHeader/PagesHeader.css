@@ -50,6 +50,7 @@
     }
 }
 
+/* This makes the page responsive */
 @media only screen and (max-width: 620px){
     .headerBox{
         display: none;

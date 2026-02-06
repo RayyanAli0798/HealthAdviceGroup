@@ -145,6 +145,7 @@
 
 }
 
+/* This makes the page responsive */
 @media only screen and (max-width: 620px) {
     .MainDashboardContent {
         display: flex;
@@ -172,7 +173,7 @@
 
 
 
-
+/* This is done to style variable dependant elements */
 .red {
     background-color: red;
 }

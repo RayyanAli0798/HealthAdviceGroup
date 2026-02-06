@@ -7,6 +7,9 @@ import axios from "axios"
 import { useUser } from "../../Contexts/UserContexts"
 import { useNavigate } from "react-router";
 
+
+
+
 export default function AccountsPage() {
     const [register, setRegister] = useState(true)
     const SetLoggedIn = useUser();
@@ -19,14 +22,14 @@ export default function AccountsPage() {
             <PagesHeader />
             <PagesHeaderForMobile />
 
-
+            {/* Switches between sign in and login whenever needed */}
             {register ? <SignUp toggle={toggleForm} /> : <SignIn toggle={toggleForm} />}
 
         </>
     )
 }
 
-
+// Sign in meu
 function SignUp({ toggle }) {
 
     const [email, setEmail] = useState("")
@@ -37,7 +40,7 @@ function SignUp({ toggle }) {
     const { SetLoggedIn } = useUser();
     const navigate = useNavigate();
 
-
+// Calls api
     function SigningUp(event) {
         //stops page from refreshing after submission
         event.preventDefault()
@@ -95,10 +98,11 @@ function SignIn({ toggle }) {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [errorMSG, setErrorMSG] = useState("")
-    
+
     const { SetLoggedIn } = useUser();
     const navigate = useNavigate();
 
+    // API CALL
     function SigningUp(event) {
         //stops page from refreshing after submission
         event.preventDefault()

@@ -38,6 +38,7 @@
     text-align: center;
 }
 
+/* This makes the page responsive */
 @media only screen and (max-width: 452px) {
     .HealthAdviceBox{
         background-color: #313536;

@@ -25,6 +25,21 @@
     border-radius: 10px;
     z-index: 1;
     top: 35dvh;
+
+    display: flex;
+    flex-direction: column;
+
+    >a{
+        font-size: large;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 10px;
+        color: #0000EE;
+        
+    }
+    
+    
+    
     
 
 }
@@ -53,4 +68,22 @@
     align-items: center;
     margin-top: -25px;
 
+    margin-right: 75px;
+
+}
+
+
+@media only screen and (max-width: 810px){
+    .ContentBoxArea{
+        display: none;
+    }
+
+    .ArticlesSection{
+        margin: 0 auto;
+    }
+}
+
+
+.UsefulLinkButton{
+    
 }

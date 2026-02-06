@@ -26,7 +26,7 @@ export default function TermsAndConditionsPage() {
     )
 }
 
-
+// Framework for the articles box
 function TextBox({ title, date, content, ID }) {
 
     return (

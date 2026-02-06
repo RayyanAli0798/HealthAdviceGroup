@@ -6,6 +6,7 @@ import Footer from "../../Components/Footer/Footer"
 import SelectorMenu from "../../Components/SelectorMenu/SelectorMenu"
 import Forecast from "../../Components/Forecast/Forecast"
 import Dashboard from "../../Components/Dashboard/Dashboard"
+import IconSelector from "../../Components/IconSelector/IconSelector"
 
 export default function HomePage() {
     return (
@@ -14,6 +15,7 @@ export default function HomePage() {
             <PagesHeaderForMobile />
 
             <main className='Main-Content'>
+                {/* The background image for the page */}
                 <img src={skyBackgroundHomePage} className="BackgroundImageHomePage" />
 
                 <div className="HomeContent">

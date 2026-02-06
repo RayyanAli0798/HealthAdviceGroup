@@ -43,6 +43,7 @@
 
     gap: 50px;
     z-index: 100;
+
     >li {
         list-style-type: none;
     }
@@ -62,6 +63,7 @@
     }
 }
 
+/* This makes the page responsive */
 @media only screen and (min-width: 621px) {
     .MobileHeaderBox {
         display: none;

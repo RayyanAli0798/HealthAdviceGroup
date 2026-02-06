@@ -13,6 +13,7 @@
 
     background-color: #313536;
     border-radius: 10px;
+    
 
     >form {
         display: flex;
@@ -56,7 +57,7 @@ label {
     font-size: large;
     justify-content: flex-start;
     gap: 2px;
-
+    color: white;
 }
 
 .SubmissionBtn {
@@ -115,4 +116,13 @@ label {
 
     -webkit-text-stroke: 1px black;
     paint-order: stroke fill;
+}
+
+
+/* Makes the page responsive */
+@media only screen and (max-width: 375px){
+    .AccountsPageBackgroundBox{
+        width: fit-content;
+        scale: 90%;
+    }
 }

@@ -8,6 +8,7 @@ export default function Footer() {
             <h2> Our Policies </h2> 
             <div className="Linkarea1">
                 <nav className=" textLine">
+                    {/* Hash link is used to onclick, user is redirected goes to a specific part of the page */}
                     <HashLink smooth to="/TNC#PrivacyPolicyBox" className="LinkText">  Privacy  </HashLink>
                     <HashLink smooth to="/TNC#TermsAndConditionsBox" className="LinkText"> | Terms and Conditions | </HashLink>
                     <HashLink smooth to="/TNC#AccessibillityStatementBox" className="LinkText"> Accessibillity  </HashLink>

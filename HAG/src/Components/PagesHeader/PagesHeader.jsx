@@ -6,7 +6,8 @@ import { useUser } from "../../Contexts/UserContexts"
 
 export default function PagesHeader() {
 
-    const {LoggedIn, SetLoggedIn } = useUser();
+    
+    const {LoggedIn, SetLoggedIn } = useUser(); // This is so when user is logged in, the value changes which changes the header
 
     return (
         <div className="headerBox">

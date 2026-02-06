@@ -1,7 +1,7 @@
 import { useContext, createContext, useState } from "react";
 
 
-export const UserContext = createContext();
+export const UserContext = createContext(); // creates a use context
 
 export function UserProvider({children}){
     const [LoggedIn, SetLoggedIn] = useState(false) 
