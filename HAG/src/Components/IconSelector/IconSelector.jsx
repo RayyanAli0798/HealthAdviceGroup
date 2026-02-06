@@ -6,6 +6,7 @@ import Sun from "../../assets/SunIcon.png"
 import Thunder from "../../assets/ThunderstormIcon.png"
 import Wind from "../../assets/WindIcon.png"
 import Night from "../../assets/NightIcon.png"
+import PartiallyCLoudy from "../../assets/PartiallyCloudyIcon.png"
 
 
 export default function IconSelector({temp}) {
@@ -19,7 +20,7 @@ export default function IconSelector({temp}) {
             SetIcon(Sun);
         }
         else if (temp == "Partly cloudy") {
-            SetIcon(Cloud)
+            SetIcon(PartiallyCLoudy)
         }
         else if (temp == "Cloudy") {
             SetIcon(Cloud)  
