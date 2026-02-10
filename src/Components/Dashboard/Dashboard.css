@@ -1,25 +1,24 @@
 .DashboardContainer {
     margin: 25px;
+    padding: 10px;
     border-radius: 15px;
 
-    width: 60dvw;
-    height: 20dvh;
-
+    /* Responsive sizing (safe everywhere) */
+    width: 60vw;
     max-width: 900px;
-    max-height: fit-content;
-    min-height: fit-content;
-    min-width: fit-content;
 
-    gap: 20px;
-    padding: 10px;
-    background-color: #313536;
+    /* Height behaves correctly on mobile */
+    min-height: auto;
+    height: auto;
 
+    /* Flex layout */
     display: flex;
     flex-direction: column;
-
+    gap: 20px;
 
     background-color: #313536;
 }
+
 
 .DashboardTitle {
     color: white;
@@ -48,7 +47,7 @@
     width: 100%;
     height: 100%;
 
-    
+
     margin-top: -15px;
 
 }
@@ -150,7 +149,7 @@
     .MainDashboardContent {
         display: flex;
         flex-direction: column;
-        
+
 
     }
 
@@ -158,10 +157,11 @@
         margin-top: 25px;
     }
 
-    .AirQualityInfo >p{
+    .AirQualityInfo>p {
         display: none;
     }
-    .AirQualityContent{
+
+    .AirQualityContent {
         display: flex;
         flex-direction: column-reverse;
     }
