@@ -1,23 +1,25 @@
 .ForecastContainer {
     margin: 25px;
+    padding: 10px;
     border-radius: 15px;
 
-    width: 90dvw;
-    height: 20dvh;
-
+    /* Responsive width (safe everywhere) */
+    width: 90vw;
     max-width: 1200px;
-    max-height: fit-content;
 
-    min-height: fit-content;
-    gap: 20px;
-    padding: 10px;
-    background-color: #313536;
+    /* Let content control height (mobile-safe) */
+    height: auto;
+    min-height: auto;
 
+    /* Layout */
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: flex-start;
+    gap: 20px;
 
+    background-color: #313536;
 }
+
 
 
 .WeatherBoxDaily {
