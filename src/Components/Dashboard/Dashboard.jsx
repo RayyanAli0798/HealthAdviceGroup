@@ -77,7 +77,7 @@ function AirQualityDisplay() {
 
     // Uses axios to call an API
     function loadAir() {
-        let query = `http://api.openweathermap.org/data/2.5/air_pollution?lat=51.52&lon=-0.127&appid=1dad6eab579ab34721c82203b48d18f5`
+        let query = `https://api.openweathermap.org/data/2.5/air_pollution?lat=51.52&lon=-0.127&appid=1dad6eab579ab34721c82203b48d18f5`
 
         setAirDataLoading(true)
         setAirDataError("")

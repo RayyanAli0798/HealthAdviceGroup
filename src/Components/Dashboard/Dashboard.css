@@ -28,19 +28,21 @@
 
 .DashboardBox {
     background-color: #81BBC9;
-    max-width: 75%;
-    min-height: fit-content;
+
     width: 100%;
+    max-width: 75%;
     min-width: 175px;
+
+    height: auto;
+    min-height: auto;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: fit-content;
 
-
-    margin: 0 10;
-
+    margin: 0 10px;
 }
+
 
 .MainDashboardContent {
     display: flex;
@@ -58,7 +60,7 @@
 
     display: flex;
     justify-content: center;
-
+    align-items: center;
 }
 
 .rightDashboard {

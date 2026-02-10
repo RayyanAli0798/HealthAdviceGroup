@@ -1,6 +1,6 @@
 .HealthAdviceBox{
     background-color: #313536;
-    height: fit-content;
+    height: auto; /* safer than fit-content */
     width: 500px;
     margin: 25px;
     padding: 10px;
@@ -13,23 +13,25 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    transform: scale(0.85);
+    /* remove transform: scale(0.85) for better rendering */
+}
 
+/* Child elements */
+.HealthAdviceBox > a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: larger;
+    margin: 0 auto;
+    background-color:  #FFDF22;
+}
 
-    >a{
-        text-decoration: none;
-        color: black;
-        padding: 10px;
-        font-size: larger;
-        margin: 0 auto;
-        background-color:  #FFDF22;
-    }
-    >p{
-        font-size: larger;
-    }
-    >h3{
-        font-size: x-large
-    }
+.HealthAdviceBox > p {
+    font-size: larger;
+}
+
+.HealthAdviceBox > h3 {
+    font-size: x-large;
 }
 
 .HealthAdviceBoxTitle{
@@ -38,21 +40,11 @@
     text-align: center;
 }
 
-/* This makes the page responsive */
+/* Responsive for small screens */
 @media only screen and (max-width: 452px) {
     .HealthAdviceBox{
-        background-color: #313536;
-    height: fit-content;
-    width: 250px;
-    margin: 25px;
-    padding: 20px;
-
-    font-family: "Inria Sans";
-    color: white;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
+        width: 250px;
+        padding: 20px;
+        gap: 5px;
     }
 }
